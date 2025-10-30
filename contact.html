@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - God loves the Trinity</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="script.js"></script>
+
+</head>
+<body>
+  <form id="reserve-form"> 
+  <!-- поля... -->
+  <button id="submit-btn" type="submit">
+    <span class="btn-text">Submit</span>
+    <span class="spinner" style="display:none;">⏳</span>
+  </button>
+</form>
+
+  <!-- Header with Navigation -->
+  <header class="main-header">
+    <div class="logo">God loves the Trinity</div>
+    <nav class="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="reserve.html">Reservations</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><button id="subscribe-btn" class="subscribe-button">Subscribe</button></li>
+        <li><button id="theme-toggle-btn">🌙 Night Mode</button></li>
+        <li>
+          <select id="language-selector">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="kz">Қазақша</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="contact-header" class="animate-on-scroll">
+      <h1>Contact Us</h1>
+      <p class="highlighted-text">We'd love to hear from you!</p>
+    </section>
+
+    <section class="contact-info animate-on-scroll" style="display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin:20px;">
+      <div class="info-box" style="background:#fff; padding:16px; border-radius:8px;">
+        <h3>Location</h3>
+        <p>123 Divine Street<br>Heaven's Gate City<br>State 12345</p>
+      </div>
+      <div class="info-box" style="background:#fff; padding:16px; border-radius:8px;">
+        <h3>Phone</h3>
+        <p>(555) 123-HOLY<br>(555) 123-4659</p>
+      </div>
+      <div class="info-box" style="background:#fff; padding:16px; border-radius:8px;">
+        <h3>Hours</h3>
+        <p>Mon-Thu: 11am-9pm<br>Fri-Sat: 11am-10pm<br>Sun: 12pm-8pm</p>
+      </div>
+    </section>
+
+    <section class="about-content animate-on-scroll">
+      <h2>Get in Touch</h2>
+      <p>Have a question, comment, or special request? We're here to help! Fill out the form below and we'll get back to you as soon as possible.</p>
+    </section>
+
+    <form class="contact-form animate-on-scroll" style="max-width:700px; margin: 0 auto; background:#fff; padding:20px; border-radius:8px;">
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject:</label>
+        <select id="subject" name="subject" required>
+          <option value="">Please select...</option>
+          <option value="general">General Inquiry</option>
+          <option value="reservation">Reservation Question</option>
+          <option value="catering">Catering Services</option>
+          <option value="complaint">Complaint</option>
+          <option value="compliment">Compliment</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" placeholder="Please enter your message here..." required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+
+    <section class="about-content animate-on-scroll">
+      <h2>Visit Our Restaurant</h2>
+      <p>Located in the heart of Heaven's Gate City, our restaurant is easily accessible by car or public transportation. We offer free parking for our guests.</p>
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=300&fit=crop" alt="Restaurant exterior" class="banner-image">
+      <p>Our beautiful dining room can accommodate both intimate dinners for two and larger group celebrations. We also offer private dining options for special events.</p>
+    </section>
+
+    <!-- NEW: Star Rating Section -->
+    <section class="rating-container animate-on-scroll">
+      <h2>Rate Our Service</h2>
+      <p>How was your experience contacting us?</p>
+      <div class="rating-stars">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <p class="rating-text">Click a star to rate</p>
+    </section>
+
+    <section class="cta-section animate-on-scroll">
+      <h2>Ready to Experience Divine Dining?</h2>
+      <p>Make your reservation today!</p>
+      <a href="reserve.html" class="button-style">Book a Table</a>
+    </section>
+  </main>
+
+  <!-- Popup Subscription Form -->
+  <div id="subscription-popup" class="popup-overlay">
+    <div class="popup-content">
+      <span id="close-popup" class="close-btn">&times;</span>
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>Get the latest updates on special offers and new menu items!</p>
+      <form id="subscription-form">
+        <input type="email" id="popup-email" placeholder="Enter your email" required>
+        <button type="submit" class="button-style">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 God loves the Trinity Restaurant. All rights reserved.</p>
+    <p>Address: 123 Divine Street, Heaven's Gate City</p>
+    <p class="datetime-display">Current time: <span id="current-datetime"></span></p>
+    <p class="team-members">Team: Newcomers(Chingiz, Sultan, Kaisar) Group: SE-2405</p>
+  </footer>
+<div id="toast-container" style="position:fixed; right:20px; bottom:20px; z-index:99999;"></div>
+
+</body>
+</html>
