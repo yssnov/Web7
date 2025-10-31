@@ -6,15 +6,15 @@
   <title>About Us - God loves the Trinity</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="script.js"></script>
+
 
 </head>
 <body>
-  <section class="stats">
-  <div class="stat"><div class="count" data-target="1200">0</div><p>Customers</p></div>
-  <div class="stat"><div class="count" data-target="350">0</div><p>Dishes</p></div>
-  <div class="stat"><div class="count" data-target="25">0</div><p>Chefs</p></div>
-</section>
+ <!-- Scroll Progress Bar -->
+  <div id="progress-bar"></div>
+  
+  <!-- Toast Container for notifications -->
+  <div id="toast-container"></div>
 
   <!-- Header with Navigation -->
   <header class="main-header">
@@ -89,6 +89,24 @@
         <li>Maintaining the highest standards of cleanliness and safety</li>
       </ul>
     </section>
+    <!-- Statistics Section -->
+<section class="stats">
+  <h2>Our Achievements</h2>
+  <div class="stats-grid">
+    <div class="stat-item">
+      <span class="count" data-target="1250">0</span>
+      <span class="stat-label">Happy Customers</span>
+    </div>
+    <div class="stat-item">
+      <span class="count" data-target="500">0</span>
+      <span class="stat-label">Menu Items</span>
+    </div>
+    <div class="stat-item">
+      <span class="count" data-target="25">0</span>
+      <span class="stat-label">Expert Chefs</span>
+    </div>
+  </div>
+</section>
 
     <!-- EXISTING: Accordion FAQ Section -->
     <section class="about-content animate-on-scroll">
@@ -208,7 +226,7 @@
     <p class="team-members">Team: Newcomers(Chingiz, Sultan, Kaisar) Group: SE-2405</p>
   </footer>
 
- <div id="toast-container" style="position:fixed; right:20px; bottom:20px; z-index:99999;"></div>
+<script src="script.js"></script>
 
 </body>
 </html>
