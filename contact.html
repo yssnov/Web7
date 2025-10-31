@@ -6,11 +6,34 @@
   <title>Contact - God loves the Trinity</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="script.js"></script>
+
 
 </head>
 <body>
+  <!-- Scroll Progress Bar -->
+  <div id="progress-bar"></div>
+  
+  <!-- Toast Container for notifications -->
+  <div id="toast-container"></div>
+
   <form id="reserve-form"> 
+
+    <form id="reserve-form">
+  <!-- Existing form fields -->
+  <button type="submit" class="submit-btn">
+    <span class="btn-text">Submit Reservation</span>
+    <span class="spinner"></span>
+  </button>
+</form>
+
+<form id="contact-form">
+  <!-- Existing form fields -->
+  <button type="submit" class="submit-btn">
+    <span class="btn-text">Send Message</span>
+    <span class="spinner"></span>
+  </button>
+</form>
+
   <!-- поля... -->
   <button id="submit-btn" type="submit">
     <span class="btn-text">Submit</span>
@@ -147,7 +170,8 @@
     <p class="datetime-display">Current time: <span id="current-datetime"></span></p>
     <p class="team-members">Team: Newcomers(Chingiz, Sultan, Kaisar) Group: SE-2405</p>
   </footer>
-<div id="toast-container" style="position:fixed; right:20px; bottom:20px; z-index:99999;"></div>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
