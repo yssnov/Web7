@@ -881,3 +881,43 @@ function initCopyButtons(){
   });
 }
 
+// === IMAGE LAZY LOADING (Task 9) ===
+function initLazyLoading(){
+  const lazyImages = $('.lazy-image');
+  if(lazyImages.length === 0) return;
+  
+  function loadVisibleImages(){
+    lazyImages.each(function(){
+      const $img = $(this);
+      if($img.hasClass('loaded')) return;
+      
+      const windowTop = $(window).scrollTop();
+      const windowBottom = windowTop + $(window).height();
+      const imgTop = $img.offset().top;
+      
+      if(imgTop < windowBottom + 200){
+        const dataSrc = $img.attr('data-src');
+        if(dataSrc){
+          $img.attr('src', dataSrc);
+          $img.addClass('loaded');
+          $img.on('load', function(){
+            $img.addClass('fade-in');
+          });
+        }
+      }
+    });
+  }
+  
+  $(window).on('scroll resize', loadVisibleImages);
+  loadVisibleImages();
+}
+
+// === INITIALIZE ALL JQUERY FEATURES ===
+$(document).ready(function(){
+  console.log("jQuery is ready!");
+  initScrollProgress();
+  initCounters();
+  initFormSpinner();
+  initCopyButtons();
+  initLazyLoading();
+});
