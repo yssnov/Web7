@@ -6,10 +6,16 @@
   <title>Menu - God loves the Trinity</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="script.js"></script>
+
 
 </head>
 <body>
+<!-- Scroll Progress Bar -->
+  <div id="progress-bar"></div>
+  
+  <!-- Toast Container for notifications -->
+  <div id="toast-container"></div>
+
   <!-- Header with Navigation -->
   <header class="main-header">
     <div class="logo">God loves the Trinity</div>
@@ -53,10 +59,12 @@
       <div id="filtered-menu"></div>
     </section>
 
-    <div class="menu-search">
+ <!-- Menu Search Section -->
+<div class="search-section">
+  <h2>Search Our Menu</h2>
   <div id="search-wrapper">
-    <input id="menu-search" type="text" placeholder="Search dishes..." autocomplete="off" />
-    <ul id="suggestions" class="suggestions" style="display:none;"></ul>
+    <input type="text" id="menu-search" placeholder="Search menu items...">
+    <ul id="suggestions"></ul>
   </div>
 </div>
 
@@ -211,7 +219,9 @@
     <p class="datetime-display">Current time: <span id="current-datetime"></span></p>
     <p class="team-members">Team: Newcomers(Chingiz, Sultan, Kaisar) Group: SE-2405</p>
   </footer>
-<div id="toast-container" style="position:fixed; right:20px; bottom:20px; z-index:99999;"></div>
+
+  
+<script src="script.js"></script>
 
 </body>
 </html>
